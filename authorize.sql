@@ -22,8 +22,8 @@ CREATE TABLE `users` (
   `address` varchar(40) NOT NULL,
   `city` varchar(40) NOT NULL,
   `state` varchar(40) NOT NULL,
-  `zip` int(10) Not NULL
-  PRIMARY KEY (`id`)
+  `zip` int(10) Not NULL,
+  PRIMARY KEY (`person_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=128 DEFAULT CHARSET=latin1;
 
 
@@ -37,9 +37,9 @@ CREATE TABLE `payments` (
   `card` int(11) NOT NULL,
   `month` int(11) NOT NULL,
   `year` int(11) NOT NULL,
-  `cvv` int(11) NOT NULL
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT DEFAULT CHARSET=latin1;
+  `cvv` int(11) NOT NULL,
+  PRIMARY KEY (`person_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=128 DEFAULT CHARSET=latin1;
 
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
