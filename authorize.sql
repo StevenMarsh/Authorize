@@ -23,16 +23,6 @@ CREATE TABLE `users` (
   `city` varchar(40) NOT NULL,
   `state` varchar(40) NOT NULL,
   `zip` int(10) Not NULL,
-  PRIMARY KEY (`person_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=128 DEFAULT CHARSET=latin1;
-
-
-/*Table structure for table `book_author` */
-
-DROP TABLE IF EXISTS `payments`;
-
-CREATE TABLE `payments` (
-  `person_id` int(11) NOT NULL AUTO_INCREMENT, 
   `name` varchar(40) NOT NULL,
   `card` int(11) NOT NULL,
   `month` int(11) NOT NULL,
@@ -40,7 +30,6 @@ CREATE TABLE `payments` (
   `cvv` int(11) NOT NULL,
   PRIMARY KEY (`person_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=128 DEFAULT CHARSET=latin1;
-
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
