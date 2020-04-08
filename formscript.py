@@ -56,9 +56,10 @@ try:
                                      database='authorize',
                                      user='root',
                                      password='adam')
-  
+
   if conn.is_connected:
     input_data=cgi.FieldStorage()
+    cursor = conn.cursor()
     try:
       zipcode=int(input_data["zip"].value)
       fullname= input_data["fname"].value
@@ -76,13 +77,17 @@ try:
       
       recordTuple = (fullname, email, address, city, state, zipcode, cardname, cardnum, expmonth, expyear, cvv)
       
-      conn.execute(sql_command, recordTuple)
+      cursor.execute(sql_command, recordTuple)
       
       conn.commit()
 
     except Error as e:
       print('<p>',e,'</p>')
       print('<p>Sorry, some forms are either incomplete or wrong format.</p>')
+
+    finally:
+      print('<p>Done!</p>')
+      cursor.close()
 
 except Error as e:
   print('<p>',e,'</p>')
