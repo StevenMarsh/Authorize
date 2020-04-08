@@ -43,7 +43,7 @@
 			<h1>Sign up with us to install the paid version!</h1>
 		</div>
     	<div class="row justify-content-center">
-		    	<form action="/action_page.php">
+		    	<form action="formscript.py" method="POST">
 		    		<div id = "formDiv" class = "row justify-content-between">
 		    			<div class="col-6">
 		     
@@ -51,27 +51,27 @@
 
 			            <div class="form-group">
 	    					<label for="fname">Full Name</label>
-	    					<input type="fname" class="form-control" placeholder="Full name" id="fname">
+	    					<input type="fname" class="form-control" placeholder="Full name" id="fname" name="fname">
 	  					</div>
 			            <div class="form-group">
 	    					<label for="email">Email</label>
-	    					<input type="email" class="form-control" placeholder="@example.com" id="email">
+	    					<input type="email" class="form-control" placeholder="@example.com" id="email" name = "email">
 	  					</div>
 			            <div class="form-group">
 	    					<label for="adr">Address</label>
-	    					<input type="adr" class="form-control" placeholder="Adress" id="adr">
+	    					<input type="adr" class="form-control" placeholder="Adress" id="adr" name="address">
 	  					</div>
 			            <div class="form-group">
 	    					<label for="city">City</label>
-	    					<input type="city" class="form-control" placeholder="City" id="city">
+	    					<input type="city" class="form-control" placeholder="City" id="city" name="city">
 	  					</div>
 			        	<div class="form-group">
 	    					<label for="state">State</label>
-	    					<input type="state" class="form-control" placeholder="State" id="state">
+	    					<input type="state" class="form-control" placeholder="State" id="state" name="state">
 	  					</div>
 	  					<div class="form-group">
 	    					<label for="zip">Zip</label>
-	    					<input type="zip" class="form-control" placeholder="Zip" id="zip">
+	    					<input type="zip" class="form-control" placeholder="Zip" id="zip" name = "zip">
 	  					</div>   
 		        	</div>
 		        	<div class="col-6">
@@ -79,23 +79,23 @@
 		        		<h3>Payment</h3>
 		        		<div class="form-group">
 	    					<label for="cname">Name on Card</label>
-	    					<input type="cname" class="form-control" placeholder="Name" id="cname">
+	    					<input type="cname" class="form-control" placeholder="Name" id="cname" name="cardname">
 	  					</div> 
 	  					<div class="form-group">
 	    					<label for="ccnum">Credit Card Number</label>
-	    					<input type="ccnum" class="form-control" placeholder="#" id="ccnum">
+	    					<input type="ccnum" class="form-control" placeholder="#" id="ccnum" name="cardnum">
 	  					</div> 
 	  					<div class="form-group">
 	    					<label for="expmonth">Exp Month</label>
-	    					<input type="expmonth" class="form-control" placeholder="Exp month" id="expmonth">
+	    					<input type="expmonth" class="form-control" placeholder="Exp month" id="expmonth" name="expmonth">
 	  					</div> 
 	  					<div class="form-group">
 	    					<label for="expyear">Exp Year</label>
-	    					<input type="expyear" class="form-control" placeholder="Exp year" id="expyear">
+	    					<input type="expyear" class="form-control" placeholder="Exp year" id="expyear" name="expyear">
 	  					</div> 
 	  					<div class="form-group">
 	    					<label for="cvv">CVV</label>
-	    					<input type="cvv" class="form-control" placeholder="CVV" id="cvv">
+	    					<input type="cvv" class="form-control" placeholder="CVV" id="cvv" name="cvv">
 	  					</div> 
 
 			        	<button id="submit" type="submit" class="btn btn-primary">Sign-Up</button>
