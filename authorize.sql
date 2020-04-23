@@ -28,7 +28,8 @@ CREATE TABLE `users` (
   `month` int(11) NOT NULL,
   `year` int(11) NOT NULL,
   `cvv` int(11) NOT NULL,
-  PRIMARY KEY (`person_id`)
+  'sub' boolean NOT NULL,
+  PRIMARY KEY (`email`)
 ) ENGINE=InnoDB AUTO_INCREMENT=128 DEFAULT CHARSET=latin1;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;

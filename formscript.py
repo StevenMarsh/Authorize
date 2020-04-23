@@ -73,9 +73,9 @@ try:
       expyear = int(input_data["expyear"].value)
       cvv = int(input_data["cvv"].value)
       
-      sql_command = """INSERT INTO users (fullname, email, address, city, state, zip, name, card, month, year, cvv) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s) """
+      sql_command = """INSERT INTO users (fullname, email, address, city, state, zip, name, card, month, year, cvv, sub) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s) """
       
-      recordTuple = (fullname, email, address, city, state, zipcode, cardname, cardnum, expmonth, expyear, cvv)
+      recordTuple = (fullname, email, address, city, state, zipcode, cardname, cardnum, expmonth, expyear, cvv, 1)
       
       cursor.execute(sql_command, recordTuple)
       
