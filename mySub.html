@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+		Home
+	</title>
+</head>
+<style type="text/css">
+	body {
+		background-color: #c3d898;
+	}
+
+	.navbar {
+		background-color: #70161e !important;
+	}
+</style>
+<body>
+
+	<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+		<a class="navbar-brand" href="#">Authorize</a>
+	    <ul class="navbar-nav">
+	      <li class="nav-item">
+	        <a class="nav-link" href="index.html">Home</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="download.html">Download</a>
+	      </li> 
+	      <li class="nav-item">
+	        <a class="nav-link" href="mySub.html">My Sub</a>
+	      </li>  
+	    </ul>  
+	</nav>
+
+	<div class ="container">
+		<div class = "row">
+			<br>
+			<br>
+		</div>
+		<div class ="row">
+			<div class ="col">
+				<h1>Type in a valid email to cancel your subscription:</h1>
+			</div>
+		</div>
+		<div class ="row">
+			<div class="col">
+				<form action="cgi-bin/emailcheck.py" method="POST"> 
+					<div class="form-group">
+	    					<label for="email">Email</label>
+	    					<input type="email" class="form-control" placeholder="@example.com" id="email" name = "email">
+	  				</div>
+	  				<button id="submit" type="submit" class="btn btn-primary">Submit</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+	
+
+	
+
+
+
+</body>
+</html>

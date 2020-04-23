@@ -11,12 +11,11 @@ CREATE DATABASE /*!32312 IF NOT EXISTS*/`authorize` /*!40100 DEFAULT CHARACTER S
 
 USE `authorize`;
 
-/*Table structure for table `authors` */
+/*Table structure for table `users` */
 
 DROP TABLE IF EXISTS `users`;
 
 CREATE TABLE `users` (
-  `person_id` int(11) NOT NULL AUTO_INCREMENT,
   `fullname` varchar(40) NOT NULL,
   `email` varchar(40) NOT NULL,
   `address` varchar(40) NOT NULL,
@@ -28,7 +27,7 @@ CREATE TABLE `users` (
   `month` int(11) NOT NULL,
   `year` int(11) NOT NULL,
   `cvv` int(11) NOT NULL,
-  'sub' boolean NOT NULL,
+  `sub` boolean,
   PRIMARY KEY (`email`)
 ) ENGINE=InnoDB AUTO_INCREMENT=128 DEFAULT CHARSET=latin1;
 

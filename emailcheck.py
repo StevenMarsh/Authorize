@@ -61,28 +61,26 @@ try:
     input_data=cgi.FieldStorage()
     cursor = conn.cursor()
     try:
-      zipcode=int(input_data["zip"].value)
-      fullname= input_data["fname"].value
       email = input_data["email"].value
-      address = input_data["address"].value
-      city = input_data["city"].value
-      state = input_data["state"].value
-      cardname = input_data["cardname"].value
-      cardnum = int(input_data["cardnum"].value)
-      expmonth = int(input_data["expmonth"].value)
-      expyear = int(input_data["expyear"].value)
-      cvv = int(input_data["cvv"].value)
       
-      sql_command = """INSERT INTO users (fullname, email, address, city, state, zip, name, card, month, year, cvv, sub) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s) """
-      
-      recordTuple = (fullname, email, address, city, state, zipcode, cardname, cardnum, expmonth, expyear, cvv, 1)
-      
-      cursor.execute(sql_command, recordTuple)
-      
-      conn.commit()
+      sql_command = """SELECT email FROM users WHERE email = %s"""
+
+      var = (email, )
+
+      cursor.execute(sql_command, var)
+
+      data = cursor.fetchall()
+
+      if not data:
+        #need alert
+        print('Email not associated with subscription')
+      else:
+        #need alert
+        print('Subscription cancelled')
 
     except Error as e:
-    	#show some kind of alert that the email is already being used
+      print('<p>',e,'</p>')
+      
 
     finally:
       print('<p>Done!</p>')
@@ -95,5 +93,3 @@ finally:
     if conn is not None and conn.is_connected():
         conn.close()
         print('<p>Connection closed</p>')
-
-
