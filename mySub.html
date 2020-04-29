@@ -20,11 +20,18 @@
 </head>
 <style type="text/css">
 	body {
-		background-color: #c3d898;
+		background-image: linear-gradient(to right, white, grey);
 	}
 
 	.navbar {
 		background-color: #70161e !important;
+	}
+
+	input{
+		width: 500px !important;
+	}
+	*{
+		font-family: American Typewriter;
 	}
 </style>
 <body>
@@ -48,10 +55,12 @@
 		<div class = "row">
 			<br>
 			<br>
+			<br>
+			<br>
 		</div>
 		<div class ="row">
 			<div class ="col">
-				<h1>Type in a valid email to cancel your subscription:</h1>
+				<h1>Type your email address to cancel your subscription:</h1>
 			</div>
 		</div>
 		<div class ="row">
@@ -75,4 +84,10 @@
 
 
 </body>
+<script type="text/javascript">
+	var sub = document.getElementById("submit");
+	sub.onclick = function(){
+		alert("Success");
+	}
+</script>
 </html>

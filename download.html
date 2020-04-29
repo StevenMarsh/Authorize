@@ -19,85 +19,32 @@
 	</title>
 </head>
 <style type="text/css">
-	.jigsaw1, .jigsaw2 {
-	  width: 6em;
-	  height: 6em;
-	  margin: 50px;
-	  position: relative;
-	  -webkit-border-radius: .5em;
-	  -moz-border-radius: .5em;
-	  border-radius: .5em;
-	  cursor: pointer;
+	.book{
+		background-image: url(book.jpeg);
 	}
-
-	.jigsaw1,
-	.jigsaw1 span {
-	 background-color: #70161e; 
-	}
-
-	.jigsaw2,
-	.jigsaw2 span {
-	 background-color: #1C3144; 
-	}
-
-	.text {
-	  display: block;
-	  color: white;
-	  font-size: 1em;
-	  text-align: center;
-	  padding: 1.9em 0 0 1.2em;
-	  position: relative;
-	  background: transparent !important;
-	}
-
-	.jigsaw1 .t, .jigsaw2 .t {
-	 width: 2em;
-	  height: 2em;
-	  position: absolute;
-	  top: -1.5em;
-	  left: 2em;
-	  -webkit-border-radius: 4em;
-	  -moz-border-radius: 4em;
-	  border-radius: 4em;
-	}
-
-	.jigsaw1 .r, .jigsaw2 .r {
-	 width: 2em;
-	  height: 2em;
-	  position: absolute;
-	  top: 2em;
-	  left: 5.5em;
-	  -webkit-border-radius: 4em;
-	  -moz-border-radius: 4em;
-	  border-radius: 4em;
-	}
-
-	.jigsaw1 .b, .jigsaw2 .b { 
-	 width: 1.8em;
-	  height: 1.8em;
-	  position: absolute;
-	  top: 4.5em;
-	  left: 2.2em;
-	  -webkit-border-radius: 4em;
-	  -moz-border-radius: 4em;
-	  border-radius: 4em;
-	  background-color: #c3d898;
-	}
-
-	.jigsaw1 .l, .jigsaw2 .l { 
-	 width: 1.8em;
-	  height: 1.8em;
-	  position: absolute;
-	  top: 2.2em;
-	  left: -.4em;
-	  -webkit-border-radius: 4em;
-	  -moz-border-radius: 4em;
-	  border-radius: 4em;
-	  background-color: #c3d898;
-	}
-
 	body {
-		background-color: #c3d898;
+		background-image: linear-gradient(to right, white, grey);
+	}
+
+	#first{
+		background-color: #70161e;
+		text-align: center;
+		display: block;
+		margin: auto;
+		width: 120px;
+		height: 120px;
+		color: white;
+		font-size: 40px;
+	}
+
+	#second{
+		background-color: navy;
+		text-align: center;
+		margin: auto;
+		width: 120px;
+		height: 120px;
+		color: white;
+		font-size: 19px;
 	}
 
 	h1 {
@@ -105,6 +52,9 @@
 	}
 	.navbar{
 		background-color: #70161e !important;
+	}
+	*{
+		font-family: American Typewriter;
 	}
 </style>
 <body>
@@ -127,6 +77,8 @@
 		<div class = "row">
 			<br>
 			<br>
+			<br>
+			<br>
 		</div>
 		<div class = "row">
 			<div class = "col-12">
@@ -137,21 +89,13 @@
 		</div>
 		<div class = "row row justify-content-center">
 			<div class = "col-sm-2">
-				<div class="jigsaw1" id = "first">
-				 	<span class="t"></span>
-				 	<span class="r"></span>
-				 	<span class="b"></span>
-					<span class="l"></span>
-			  		<span class="text">Free</span>
+				<div class="ye" id = "first">
+			  		Free
 				</div>
 
 			</div>
 			<div class = "col-sm-2">
-				<div class="jigsaw2" id = "second">
-				  <span class="t"></span>
-				  <span class="r"></span>
-				  <span class="b"></span>
-				  <span class="l"></span>
+				<div class="ye" id = "second">
 			      <span class="text">$1.99/month</span>
 				</div>
 			</div>
